@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>
+        This is public content
+    </h1>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut tenetur laudantium aliquam illum fuga aspernatur
+        quis animi porro ratione, nesciunt error ipsam commodi, qui temporibus possimus aperiam accusamus. Maxime
+        tempora deleniti modi rem, omnis reprehenderit ducimus quia ab. Ratione libero quasi qui odit vel excepturi
+        suscipit recusandae numquam totam nisi. Ipsum repellat consequuntur iste ab cupiditate. Magnam delectus quo
+        corporis aperiam veniam unde commodi pariatur repudiandae facere deleniti sapiente facilis provident sed illo
+        cumque temporibus maxime, laboriosam tempore accusantium ducimus dolorum explicabo in! Repellat maxime sit quia
+        tenetur a laborum animi blanditiis cumque eius, voluptatum perspiciatis aperiam necessitatibus, consequatur
+        facilis.
+    </div>
+    {% if user.is_authenticated %}
+    <div class="my-2">
+        <a href="/logout" class="btn btn-primary btn-sm"> Logout</a>
+    </div>
+    {% else %}
+    <a href="/" class="btn btn-primary btn-sm"> Login</a>
+    {% endif %}
+</div>
+{% endblock content %}
